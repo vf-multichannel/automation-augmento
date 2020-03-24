@@ -9,9 +9,10 @@ import org.testng.annotations.Test;
 
 import com.augmento.pages.BaseClass;
 import com.augmento.pages.HomePage;
+import com.augmento.pages.ListManager_CreateListPage;
 import com.augmento.pages.ListManager_ListLibraryPage;
+import com.augmento.pages.ListManager_NewListPage;
 import com.augmento.pages.LoginPage;
-import com.augmento.pages.NewListPage;
 import com.augmento.utility.ExcelReader;
 
 public class ListManager_CreateListPageTest extends BaseClass {
@@ -19,9 +20,10 @@ public class ListManager_CreateListPageTest extends BaseClass {
 	
 	LoginPage loginpage;
 	HomePage homepage;
-	NewListPage newlistpage;
+	ListManager_NewListPage newlistpage;
 	ExcelReader reader;
 	ListManager_ListLibraryPage listlibraryPage;
+	ListManager_CreateListPage newCreateList;
 	
 
 	public ListManager_CreateListPageTest() {
@@ -32,7 +34,8 @@ public class ListManager_CreateListPageTest extends BaseClass {
 	public void setup() {	
 		init();
 		listlibraryPage = new ListManager_ListLibraryPage();
-		newlistpage = new NewListPage();
+		newlistpage = new ListManager_NewListPage();
+		newCreateList = new ListManager_CreateListPage();
 		loginpage =  new LoginPage();
 		homepage = loginpage.LogintoAugmento(prop.getProperty("UserName"), prop.getProperty("Password"));
 		newlistpage = homepage.clickOnListManager();
@@ -68,8 +71,8 @@ public class ListManager_CreateListPageTest extends BaseClass {
 		  FileNotFoundException, AWTException, InterruptedException {
 		  
 		  
-			  newlistpage.createList(listName, Listcategory, description);
-			  newlistpage.createFileInlist(typeFile, filePath, emailModifier, mobileIdentifier, UniqueIdentifier , jsonDataHeader ,jsonData, delimeters );
+			  newCreateList.createList(listName, Listcategory, description);
+			  newCreateList.createFileInlist(typeFile, filePath, emailModifier, mobileIdentifier, UniqueIdentifier , jsonDataHeader ,jsonData, delimeters );
 			
 			  
 			  

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class HomePage extends BaseClass  {
 	
 	
@@ -18,11 +19,11 @@ public class HomePage extends BaseClass  {
 	
 	
 	
-	public NewListPage clickOnListManager()
+	public ListManager_NewListPage clickOnListManager()
 	   {
 		mouseover(ListManager);
 		NewList.click();
-		return new NewListPage();
+		return new ListManager_NewListPage();
 		}
 
 }

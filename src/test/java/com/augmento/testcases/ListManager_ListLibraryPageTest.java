@@ -8,7 +8,7 @@ import com.augmento.pages.BaseClass;
 import com.augmento.pages.HomePage;
 import com.augmento.pages.ListManager_ListLibraryPage;
 import com.augmento.pages.LoginPage;
-import com.augmento.pages.NewListPage;
+import com.augmento.pages.ListManager_CreateListPage;
 import com.augmento.utility.ExcelReader;
 
 public class ListManager_ListLibraryPageTest extends BaseClass {
@@ -17,7 +17,7 @@ public class ListManager_ListLibraryPageTest extends BaseClass {
 	private static final boolean False = false;
 	LoginPage loginpage;
 	HomePage homepage;
-	NewListPage newlistpage;
+	ListManager_CreateListPage newlistpage;
 	ListManager_ListLibraryPage listlibrarypage;
 	ExcelReader reader;
 	 
@@ -32,7 +32,7 @@ public class ListManager_ListLibraryPageTest extends BaseClass {
 	public void setUp() {
 		init();
 		listlibrarypage =new ListManager_ListLibraryPage();
-		newlistpage = new NewListPage();
+		newlistpage = new ListManager_CreateListPage();
 		loginpage =  new LoginPage();
 		homepage = loginpage.LogintoAugmento(prop.getProperty("UserName"), prop.getProperty("Password"));
 				

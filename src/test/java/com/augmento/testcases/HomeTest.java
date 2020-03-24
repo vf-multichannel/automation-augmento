@@ -5,15 +5,16 @@ import org.testng.annotations.Test;
 
 import com.augmento.pages.BaseClass;
 import com.augmento.pages.HomePage;
+import com.augmento.pages.ListManager_NewListPage;
 import com.augmento.pages.LoginPage;
-import com.augmento.pages.NewListPage;
+
 
 public class HomeTest extends BaseClass{
 	
 	
 	LoginPage loginpage;
 	HomePage homepage;
-	NewListPage newlistpage;
+	ListManager_NewListPage newlistpage;
 	 
 	public  HomeTest() {
 		// TODO Auto-generated constructor stub
@@ -25,7 +26,7 @@ public class HomeTest extends BaseClass{
 	@BeforeMethod
 	public void setUp() {
 		init();
-		newlistpage = new NewListPage();
+		newlistpage = new ListManager_NewListPage();
 		loginpage =  new LoginPage();
 		homepage = loginpage.LogintoAugmento(prop.getProperty("UserName"), prop.getProperty("Password"));
 				

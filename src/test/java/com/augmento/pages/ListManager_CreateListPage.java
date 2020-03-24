@@ -14,10 +14,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.thoughtworks.selenium.webdriven.commands.KeyEvent;
 
-public class NewListPage extends BaseClass {
+public class ListManager_CreateListPage extends BaseClass {
 	
 
-	public NewListPage() {
+	public ListManager_CreateListPage() {
 		PageFactory.initElements(driver, this);
 		
 	}
