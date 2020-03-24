@@ -13,7 +13,7 @@ public class SMSTemplateLibraryPage extends BaseClass{
     @FindBy(xpath="//input[@value='Search List']") WebElement SearchButton;
 	
     
-    public void navigateToCreateSMSTemaplatePage() {
+    public void navigateToCreateSMSTemplatePage() {
     	
     	cr.navigateToSMSTemplatePage();
     	CreateNew.click();

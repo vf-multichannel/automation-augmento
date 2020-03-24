@@ -5,28 +5,27 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.augmento.pages.BaseClass;
-import com.augmento.pages.CreateSMSSenderPage;
+import com.augmento.pages.CreateSMSTemplatePage;
 import com.augmento.pages.HomePage;
 import com.augmento.pages.LoginPage;
-import com.augmento.pages.SMSSenderLibraryPage;
+import com.augmento.pages.SMSTemplateLibraryPage;
 import com.augmento.utility.ExcelReader;
 
-public class CreateSMSSenderTest extends BaseClass{
-	
+public class CreateSMSTemplateTest extends BaseClass  {
 	LoginPage loginpage;
 	HomePage homepage;
 	ExcelReader reader;
-	CreateSMSSenderPage smssender;
-	SMSSenderLibraryPage smssenderlibrary;
+	CreateSMSTemplatePage smstemplate;
+	SMSTemplateLibraryPage smstemplatelibrary;
 	
 	@BeforeMethod
 	public void setup() {	
 		init();
-		smssender = new CreateSMSSenderPage();
-		smssenderlibrary=new SMSSenderLibraryPage();
+		smstemplate = new CreateSMSTemplatePage();
+		smstemplatelibrary=new SMSTemplateLibraryPage();
 		loginpage =  new LoginPage();
 		homepage = loginpage.LogintoAugmento(prop.getProperty("UserName"), prop.getProperty("Password"));
-		smssenderlibrary.navigateToCreateSMSSenderPage();
+		smstemplatelibrary.navigateToCreateSMSTemplatePage();
 		
 	}
 	
@@ -37,9 +36,9 @@ public class CreateSMSSenderTest extends BaseClass{
 		 reader = new ExcelReader(System.getProperty("user.dir") +
 		 "./TestData/Data.xlsx");
 		  
-		  int row = reader.getrowCount("SMSSender");
+		  int row = reader.getrowCount("SMSTemplate");
 		  
-		  int column = reader.getColumnCount("SMSSender");
+		  int column = reader.getColumnCount("SMSTemplate");
 		  
 		  Object[][] data = new Object[row][column];
 		  
@@ -47,15 +46,13 @@ public class CreateSMSSenderTest extends BaseClass{
 		  
 		  for (int j = 0; j < column; j++) {
 		  
-		  data[i][j] = reader.getData("SMSSender", i + 1, j); } } return data; }
+		  data[i][j] = reader.getData("SMSTemplate", i + 1, j); } } return data; }
 		  
 	 
 	@Test(dataProvider = "getexceldata")
-	public void creatingEmailSender(String SenderName,String UseCase,String SampleSMSText){
+	public void creatingEmailSender(String TemplateName,String Description,String Type,String MessageType,String MessageText){
 		
-		smssender.CreateSMSSender(SenderName, UseCase, SampleSMSText);
+		smstemplate.CreateTextTemplate(TemplateName, Description, Type, MessageType, MessageText);
 	} 
 	
 }
-
-
