@@ -17,10 +17,10 @@ public class CreateSMSTemplatePage extends BaseClass{
     
     
     
-public void CreateTextTemplate(String TemplateNamex, String Decsriptionx,String Typex,String MessageTypex,String MessageTextx){
+public void CreateTextTemplate(String TemplateNamex, String Descriptionx,String Typex,String MessageTypex,String MessageTextx){
     	
 	    TemplateName.sendKeys(TemplateNamex);
-	    Decsription.sendKeys(Decsriptionx);
+	    Decsription.sendKeys(Descriptionx);
 	    Select s=new Select(Type);
 	    s.selectByValue(Typex);
 	    Select s1=new Select(MessageType);
