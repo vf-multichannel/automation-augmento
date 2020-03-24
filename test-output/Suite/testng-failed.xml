@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.augmento.testcases.ListManager_CreateListPageTest">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setup"/>
+          <include name="loginAugmento"/>
+        </methods>
+      </class> <!-- com.augmento.testcases.ListManager_CreateListPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
