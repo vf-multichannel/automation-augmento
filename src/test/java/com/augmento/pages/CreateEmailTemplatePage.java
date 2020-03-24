@@ -20,34 +20,35 @@ public class CreateEmailTemplatePage extends BaseClass {
     
     
     
-    public void CreateTextTmaplate(String TemplateNamex,String TemplateSubjectx,String SimpleTextx ) {
+    public void CreateSMSTmaplate(String TemplateNamex,String TemplateSubjectx,String TemplateContentTypex,String SimpleTextx,String HtmlFilepath,String WebUrlx  ) {
     	
     	TemplateName.sendKeys(TemplateNamex);
     	TemplateSubject.sendKeys(TemplateSubjectx);
+    	
+    	if(TemplateContentTypex.equalsIgnoreCase("text")) {
     	SimpleText.sendKeys(SimpleTextx);
-    	CreateNewTemplate.click();
-    }
+    	}
     
-    public void CreateHtmlTemplate(String TemplateNamex,String TemplateSubjectx,String HtmlFilepath) {
-    	
-    	TemplateName.sendKeys(TemplateNamex);
-    	TemplateSubject.sendKeys(TemplateSubjectx);
+    	if(TemplateContentTypex.equalsIgnoreCase("html")){
     	Select s=new Select(TemplateContentType);
     	s.selectByValue("html");
     	ChooseHtmlFile.sendKeys(HtmlFilepath);
-    	CreateNewTemplate.click();
+    	}
     	
     	
-    }
-
-    public void WebURLTemplate(String TemplateNamex,String TemplateSubjectx,String WebUrlx ){
+    	if(TemplateContentTypex.equalsIgnoreCase("weburl")){
     	TemplateName.sendKeys(TemplateNamex);
     	TemplateSubject.sendKeys(TemplateSubjectx);
     	Select s=new Select(TemplateContentType);
     	s.selectByValue("webUrl");
     	WebUrl.sendKeys(WebUrlx);
+    	}
+    	
     	CreateNewTemplate.click();
-    } 
+     
+
+
+}
 
 
 }
