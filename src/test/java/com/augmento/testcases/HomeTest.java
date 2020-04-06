@@ -3,7 +3,7 @@ package com.augmento.testcases;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.augmento.pages.BaseClass;
+import com.augment.base.BaseClass;
 import com.augmento.pages.HomePage;
 import com.augmento.pages.ListManager_NewListPage;
 import com.augmento.pages.LoginPage;
@@ -33,7 +33,7 @@ public class HomeTest extends BaseClass{
 		}
 	
 	@Test
-	public void newList() {
+	public void newList() throws InterruptedException {
 		newlistpage=homepage.clickOnListManager();
 	}
 	

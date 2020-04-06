@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.augment.base.BaseClass;
+
 public class ListLibrary_BlackListPage extends BaseClass{
 	
 	public ListLibrary_BlackListPage() {
@@ -42,7 +44,7 @@ public class ListLibrary_BlackListPage extends BaseClass{
 	
  
 
-public void blackList(String ValueAdd, String mobileValue, String emailValue, String blackUploadPath, String emailIdentifierx, String mobileIdentifierx ) {
+public void blackList(String ValueAdd, String mobileValue, String emailValue, String blackUploadPath, String emailIdentifierx, String mobileIdentifierx ) throws InterruptedException {
 	
 	mouseover(ListManager);
 	

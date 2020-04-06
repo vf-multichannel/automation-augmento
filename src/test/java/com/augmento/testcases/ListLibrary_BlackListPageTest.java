@@ -4,13 +4,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.augmento.pages.BaseClass;
-import com.augmento.pages.ListLibrary_BlackListPage;
+import com.augment.base.BaseClass;
 import com.augmento.pages.HomePage;
+import com.augmento.pages.ListLibrary_BlackListPage;
 import com.augmento.pages.ListManager_ListLibraryPage;
 import com.augmento.pages.ListManager_NewListPage;
 import com.augmento.pages.LoginPage;
-
 import com.augmento.utility.ExcelReader;
 
 public class ListLibrary_BlackListPageTest extends BaseClass {
@@ -22,6 +21,7 @@ public class ListLibrary_BlackListPageTest extends BaseClass {
 	ListManager_ListLibraryPage listlibrarypage;
 	ExcelReader reader;
 	ListLibrary_BlackListPage blacklistpage;
+	
 	 
 	public  ListLibrary_BlackListPageTest() {
 		// TODO Auto-generated constructor stub
@@ -69,7 +69,7 @@ public class ListLibrary_BlackListPageTest extends BaseClass {
 
 @Test
 (dataProvider = "getexceldata")
-public void blackList(String ValueAdd, String mobileValue, String emailValue, String blackUploadPath, String emailIdentifier, String mobileIdentifier) {
+public void blackList(String ValueAdd, String mobileValue, String emailValue, String blackUploadPath, String emailIdentifier, String mobileIdentifier) throws InterruptedException {
 	
 	blacklistpage.blackList(ValueAdd, mobileValue, emailValue ,blackUploadPath, emailIdentifier, mobileIdentifier);
 	

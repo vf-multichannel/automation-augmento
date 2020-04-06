@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.augmento.utility.Listeners"/>
+  </listeners>
   <test name="Test(failed)">
     <classes>
-      <class name="com.augmento.testcases.ListManager_CreateListPageTest">
+      <class name="com.augmento.testcases.ListManager_ListLibraryPageTest">
         <methods>
-          <include name="tearDownMethod"/>
-          <include name="setup"/>
-          <include name="loginAugmento"/>
+          <include name="createSegment" invocation-numbers="2 3"/>
+          <include name="setUp"/>
+          <include name="flushreport"/>
+          <include name="report"/>
         </methods>
-      </class> <!-- com.augmento.testcases.ListManager_CreateListPageTest -->
+      </class> <!-- com.augmento.testcases.ListManager_ListLibraryPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

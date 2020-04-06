@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.augment.base.BaseClass;
+
 
 public class HomePage extends BaseClass  {
 	
@@ -19,7 +21,7 @@ public class HomePage extends BaseClass  {
 	
 	
 	
-	public ListManager_NewListPage clickOnListManager()
+	public ListManager_NewListPage clickOnListManager() throws InterruptedException
 	   {
 		mouseover(ListManager);
 		NewList.click();

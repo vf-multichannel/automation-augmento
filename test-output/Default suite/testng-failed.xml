@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.augmento.testcases.ListManager_CreateListPageTest">
+      <class name="com.augmento.testcases.ListManager_ListLibraryPageTest">
         <methods>
-          <include name="tearDownMethod"/>
-          <include name="setup"/>
-          <include name="loginAugmento" invocation-numbers="0"/>
+          <include name="createSegment" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="flushreport"/>
+          <include name="report"/>
         </methods>
-      </class> <!-- com.augmento.testcases.ListManager_CreateListPageTest -->
+      </class> <!-- com.augmento.testcases.ListManager_ListLibraryPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

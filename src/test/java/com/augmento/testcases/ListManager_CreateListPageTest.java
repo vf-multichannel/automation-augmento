@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.augmento.pages.BaseClass;
+import com.augment.base.BaseClass;
 import com.augmento.pages.HomePage;
 import com.augmento.pages.ListManager_CreateListPage;
 import com.augmento.pages.ListManager_ListLibraryPage;
@@ -31,7 +31,7 @@ public class ListManager_CreateListPageTest extends BaseClass {
 	}
 
 	@BeforeMethod
-	public void setup() {	
+	public void setup() throws InterruptedException {	
 		init();
 		listlibraryPage = new ListManager_ListLibraryPage();
 		newlistpage = new ListManager_NewListPage();
@@ -72,7 +72,7 @@ public class ListManager_CreateListPageTest extends BaseClass {
 		  
 		  
 			  newCreateList.createList(listName, Listcategory, description);
-			  newCreateList.createFileInlist(typeFile, filePath, emailModifier, mobileIdentifier, UniqueIdentifier , jsonDataHeader ,jsonData, delimeters );
+			  newCreateList.createFileInlist(listName, typeFile, filePath, emailModifier, mobileIdentifier, UniqueIdentifier , jsonDataHeader ,jsonData, delimeters );
 			
 			  
 			  
